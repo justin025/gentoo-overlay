@@ -1,0 +1,34 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e0f6b6f..e669d45 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -43,9 +43,9 @@ configure_file(
+ )
+
+ if(LINUX)
+-  find_package(Qt6 6.4 COMPONENTS Core Quick WaylandCompositor QuickDialogs2 Svg HttpServer Sql Pdf LinguistTools REQUIRED)
++  find_package(Qt6 6.4 COMPONENTS Core Quick WaylandCompositor QuickDialogs2 Svg HttpServer Sql Pdf REQUIRED)
+ else()
+-  find_package(Qt6 6.4 COMPONENTS Core Quick QuickDialogs2 Svg HttpServer Sql Pdf LinguistTools REQUIRED)
++  find_package(Qt6 6.4 COMPONENTS Core Quick QuickDialogs2 Svg HttpServer Sql Pdf REQUIRED)
+ endif()
+
+ # Get the Qt6Core target properties
+@@ -227,17 +227,6 @@ qt_add_qml_module(chat
+       icons/you.svg
+ )
+
+-qt_add_translations(chat
+-    TS_FILES
+-    ${CMAKE_SOURCE_DIR}/translations/gpt4all_en_US.ts
+-    ${CMAKE_SOURCE_DIR}/translations/gpt4all_es_MX.ts
+-    ${CMAKE_SOURCE_DIR}/translations/gpt4all_zh_CN.ts
+-    ${CMAKE_SOURCE_DIR}/translations/gpt4all_zh_TW.ts
+-    ${CMAKE_SOURCE_DIR}/translations/gpt4all_ro_RO.ts
+-    ${CMAKE_SOURCE_DIR}/translations/gpt4all_it_IT.ts
+-    ${CMAKE_SOURCE_DIR}/translations/gpt4all_pt_BR.ts
+-)
+-
+ set_target_properties(chat PROPERTIES
+     WIN32_EXECUTABLE TRUE
+ )

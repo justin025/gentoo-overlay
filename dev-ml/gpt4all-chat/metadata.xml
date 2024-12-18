@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+        <maintainer type="person" proxied="yes">
+                <email>justin026@protonmail.com</email>
+                <name>Justin</name>
+        </maintainer>
+        <use>
+                <flag name="nls">
+                        Add Native Language Support (using <pkg>dev-qt/linguist</pkg>)
+                </flag>
+                <flag name="cuda">
+                        Add CUDA support via <pkg>dev-util/nvidia-cuda-toolkit</pkg>
+                </flag>
+                <flag name="wayland">
+                        Enable <pkg>dev-libs/wayland</pkg> backend
+                </flag>
+        </use>
+        <upstream>
+                <remote-id type="github">nomic-ai/gpt4all</remote-id>
+        </upstream>
+</pkgmetadata>

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+
+<repostories version="1.0">
+  <repo priority="50" quality="experimental" status="unofficial">
+    <name>justin025</name>
+    <description>A backup of my local overlay, contains various ebuilds of dubious quality.</description>
+    <homepage>https://github.com/justin025/gentoo-overlay</homepage>
+    <source type="git">https://github.com/justin025/gentoo-overlay.git</source>
+  </repo>
+</repostories>

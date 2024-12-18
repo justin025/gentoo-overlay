@@ -1,0 +1,25 @@
+From 503ecb1affe8c36766d722078d5a4205a099c33b Mon Sep 17 00:00:00 2001
+From: Richard-Rogalski <rrogalski@tutanota.com>
+Date: Tue, 21 May 2024 11:11:22 -0500
+Subject: [PATCH] Fix Java auto-detect so it finds Gentoo installed JDKs
+
+Signed-off-by: Richard-Rogalski <rrogalski@tutanota.com>
+---
+ launcher/java/JavaUtils.cpp | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/launcher/java/JavaUtils.cpp b/launcher/java/JavaUtils.cpp
+index 2f91605bf7..e9855dc406 100644
+--- a/launcher/java/JavaUtils.cpp
++++ b/launcher/java/JavaUtils.cpp
+@@ -441,6 +441,10 @@ QList<QString> JavaUtils::FindJavaPaths()
+     scanJavaDir("/usr/lib/jvm");
+     scanJavaDir("/usr/lib64/jvm");
+     scanJavaDir("/usr/lib32/jvm");
++    // Gentoo's locations for openjdk and openjdk-bin respectively
++    scanJavaDir("/usr/lib64");
++    scanJavaDir("/usr/lib");
++    scanJavaDir("/opt");
+     // javas stored in PolyMC's folder
+     scanJavaDir("java");
+     // manually installed JDKs in /opt
