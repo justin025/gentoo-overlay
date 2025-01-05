@@ -11,7 +11,6 @@ inherit distutils-r1 desktop xdg
 if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/justin025/onthespot.git"
-	KEYWORDS="~amd64"
 else
 	SRC_URI="https://github.com/justin025/onthespot/archive/refs/tags/v${PV}.tar.gz
 			 -> ${P}.tar.gz"
