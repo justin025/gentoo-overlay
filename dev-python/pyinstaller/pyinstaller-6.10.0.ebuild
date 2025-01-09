@@ -25,4 +25,7 @@ DEPEND="
         dev-python/pyinstaller-hooks-contrib
 "
 
+RDEPENDS="
+        dev-python/gssapi
+"
 distutils_enable_tests pytest
