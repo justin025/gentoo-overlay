@@ -1,4 +1,7 @@
-A backup of my local overlay, contains various ebuilds of dubious quality.
+A backup of my local overlay, contains various ebuilds of dubious quality. To add the repository run the command below:
+```bash
+eselect repository add justin025 git https://github.com/justin025/onthespot
+```
 
 ## Pushed To Guru
 ```bash
