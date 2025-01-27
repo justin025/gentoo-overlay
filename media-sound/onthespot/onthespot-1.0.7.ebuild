@@ -29,6 +29,7 @@ BDEPEND="
 "
 
 RDEPEND="
+	dev-python/crunpyroll
 	dev-python/flask
 	dev-python/flask-login
 	dev-python/librespot
