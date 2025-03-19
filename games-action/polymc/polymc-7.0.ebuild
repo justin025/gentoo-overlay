@@ -22,7 +22,6 @@ else
 	# Let's use the vendored tarball to avoid dealing with the submodules directly
 	SRC_URI="
 		https://github.com/PolyMC/PolyMC/releases/download/${PV}/${MY_PN}-${PV}.tar.gz -> ${P}.tar.gz
-		https://github.com/PolyMC/libnbtplusplus/archive/2203af7eeb48c45398139b583615134efd8d407f.tar.gz -> ${P}-libnbtplusplus.tar.gz
 	"
 
 	# The PolyMC's files are unpacked to ${WORKDIR}/PolyMC-${PV}
@@ -92,14 +91,6 @@ RDEPEND="
 "
 
 src_prepare() {
-        pushd "${WORKDIR}" >&/dev/null || die
-
-        rmdir ${S}/libraries/libnbtplusplus ||die
-        mv libnbtplusplus-*/ "${S}/libraries/libnbtplusplus" || die
-
-	popd >&/dev/null || die
-
-
 	cmake_src_prepare
 
 	# Prevent conflicting with the user's flags
@@ -126,10 +117,6 @@ src_configure(){
 	fi
 
 	cmake_src_configure
-}
-
-src_compile(){
-	cmake_src_compile
 }
 
 pkg_postinst() {
