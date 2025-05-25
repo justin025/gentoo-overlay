@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -29,7 +29,6 @@ BDEPEND="
 "
 
 RDEPEND="
-	dev-python/crunpyroll
 	dev-python/flask
 	dev-python/flask-login
 	dev-python/librespot
@@ -42,7 +41,7 @@ RDEPEND="
 	dev-python/requests
 	dev-python/urllib3
 	media-libs/mutagen
-	media-video/ffmpeg[mp3,openssl,sdl]
+	media-video/ffmpeg
 	net-misc/yt-dlp
 	webui? (
 		acct-group/onthespot

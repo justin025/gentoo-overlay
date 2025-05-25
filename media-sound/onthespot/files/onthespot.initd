@@ -1,5 +1,5 @@
 #!/sbin/openrc-run
-# Copyright 2024-2025 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 ONTHESPOT_USER=${ONTHESPOT_USER:-onthespot}
